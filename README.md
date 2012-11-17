@@ -1,4 +1,4 @@
-bem-express
+BEM-express
 ===========
 
 BEM driver for expressjs
