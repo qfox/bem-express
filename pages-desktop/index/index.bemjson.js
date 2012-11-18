@@ -2,10 +2,9 @@
     block: 'b-page',
     title: 'BEM Server Motivator',
     head: [
-        { elem: 'css', url: 'pages-desktop/index/_index.css', ie: false },
-        { elem: 'css', url: 'pages-desktop/index/_index.ie.css', ie: 'lt IE 8' },
-        { block: 'i-jquery', elem: 'core' },
-        { elem: 'js', url: 'pages-desktop/index/_index.js' }
+        { elem: 'css', url: 'pages-desktop/index/_index.css' },
+        { elem: 'meta', attrs: { name: 'description', content: 'Project to motivate yourself' }},
+        { elem: 'meta', attrs: { name: 'keywords', content: 'bem, express, pysch' }}
     ],
     content: [
         {
@@ -85,6 +84,8 @@
                     ]
                 }
             ]
-        }
+        },
+        { block: 'i-jquery', elem: 'core' },
+        { elem: 'js', url: 'pages-desktop/index/_index.js' }
     ]
 });

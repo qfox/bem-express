@@ -5,9 +5,7 @@
   "version": "0.0.1",
   "dependencies": {
     "express": ">= 3.0.3",
-    "bem": ">= 0.5.15",
-    "xjst": ">= 0.3.14",
-    "ometajs": ">= 3.1.15"
+    "bem": ">= 0.5.20"
   },
   "engine": "node 0.6.11"
 }

@@ -1,0 +1,8 @@
+.DS_Store
+bem-bl
+bl-core-bemhtml
+node_modules
+.bem/cache
+pages-desktop/*/*.*
+!pages-desktop/*/*.bemjson.js
+!pages-desktop/.bem/level.js

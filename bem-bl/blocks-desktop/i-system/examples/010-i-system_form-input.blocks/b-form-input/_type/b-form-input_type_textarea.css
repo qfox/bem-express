@@ -1,9 +1,0 @@
-.b-form-input_type_textarea .b-form-input__input
-{
-    resize: vertical;
-}
-
-body .b-form-input_type_textarea .b-form-input__hint
-{
-    padding-top: 0.4em;
-}

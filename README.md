@@ -3,6 +3,8 @@ BEM-express
 
 BEM driver for expressjs
 
- 1. npm install
- 2. node app.js
- 3. http://127.0.0.1:3000/
+### Usage
+`git clone git://github.com/Navotno/bem-express.git`
+`cd bem-express`
+`make` or `npm install && bem make && node app.js`
+`http://127.0.0.1:3000/`
