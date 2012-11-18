@@ -6,7 +6,7 @@ BEM driver for expressjs
 ### Install
  1. `git clone git://github.com/Navotno/bem-express.git`
  2. `cd bem-express`
- 3. `npm install && bem make`
+ 3. `npm install && ./node_modules/.bin/bem make`
 
 ### Usage
 #### Development environment

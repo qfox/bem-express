@@ -9,7 +9,7 @@ ifneq (,$(findstring B,$(MAKEFLAGS)))
 	BEM_FLAGS := --force
 endif
 
-all:: server
+all:: make
 
 %:: $(BEM)
 	$(if $(findstring GNUmakefile,$@),,$(BEM) make $@ $(BEM_FLAGS))
