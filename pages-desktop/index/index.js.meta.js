@@ -1,0 +1,14 @@
+([
+    "../../bem-bl/blocks-common/i-jquery/__inherit/i-jquery__inherit.js",
+    "../../bem-bl/blocks-common/i-jquery/__identify/i-jquery__identify.js",
+    "../../bem-bl/blocks-common/i-jquery/__is-empty-object/i-jquery__is-empty-object.js",
+    "../../bem-bl/blocks-common/i-jquery/__debounce/i-jquery__debounce.js",
+    "../../bem-bl/blocks-common/i-jquery/__observable/i-jquery__observable.js",
+    "../../bem-bl/blocks-common/i-bem/i-bem.js",
+    "../../bem-bl/blocks-common/i-ecma/__object/i-ecma__object.js",
+    "../../bem-bl/blocks-common/i-ecma/__array/i-ecma__array.js",
+    "../../bem-bl/blocks-common/i-ecma/__function/i-ecma__function.js",
+    "../../bem-bl/blocks-common/i-bem/__internal/i-bem__internal.js",
+    "../../blocks-desktop/b-page/b-page.js",
+    "../../blocks-desktop/b-my-block/b-my-block.js"
+])
