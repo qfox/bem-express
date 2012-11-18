@@ -3,9 +3,7 @@
     title: 'BEM Server Motivator',
     head: [
         { elem: 'css', url: 'pages-desktop/index/_index.css', ie: false },
-        { elem: 'css', url: 'pages-desktop/index/_index.ie.css', ie: 'lt IE 8' },
-        { block: 'i-jquery', elem: 'core' },
-        { elem: 'js', url: 'pages-desktop/index/_index.js' }
+        { elem: 'css', url: 'pages-desktop/index/_index', ie: true }
     ],
     content: [
         {
@@ -83,7 +81,9 @@
                             ]
                         }
                     ]
-                }
+                },
+                { block: 'i-jquery', elem: 'core' },
+                { elem: 'js', url: 'pages-desktop/index/_index.js' }
             ]
         }
     ]
