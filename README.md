@@ -14,5 +14,5 @@ BEM driver for expressjs
  2. `http://127.0.0.1:3000/`
 
 #### Testing and production environment
- 1. `make`
+ 1. `make server`
  2. `http://127.0.0.1:3000/`
