@@ -5,6 +5,7 @@ exports.getTechs = function() {
     techs = techs || this.__base();
     techs['bemjson.js'] = '';
     techs['bemhtml.js'] = '../../bem-bl/blocks-common/i-bem/bem/techs/bemhtml.js';
+    techs['priv.js'] = '../../.bem/techs/priv.js.js';
     techs['html'] = '../../bem-bl/blocks-common/i-bem/bem/techs/html';
     return techs;
 };

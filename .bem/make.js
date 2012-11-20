@@ -37,7 +37,8 @@ MAKE.decl('BundleNode', {
             'deps.js',
             'bemhtml.js',
             'css',
-            'js'
+            'js',
+            'priv.js'
             // ,
             // 'html'
         ];
