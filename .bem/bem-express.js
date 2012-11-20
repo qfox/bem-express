@@ -39,9 +39,29 @@ var bemDriver = function() {
 
     var getCreateResult = function(str) {
 
+/*
         return getHtml(
             getBemhtml(str),
             getBemjson(str));
+*/
+        var path,
+            pathArr = str.replace('bemhtml', 'priv').split('/');
+
+        pathArr[pathArr.length - 1] = '_' + pathArr[pathArr.length - 1];
+        path = pathArr.join('/');
+
+        return BEM.util.readFile(path)
+            .then(function(c) {
+
+                var blocks = {},
+                    PRIV = function(data) {
+                        return blocks['b-page'](data);
+                    };
+
+                eval(c);
+
+                return BEMHTML.apply(PRIV());
+            });
 
     };
 
