@@ -1,8 +1,8 @@
 ({
-    block: 'b-page',
+    block: 'page',
     title: 'BEM Server Motivator',
     head: [
-        { elem: 'css', url: 'pages-desktop/index/_index.css' },
+        { elem: 'css', url: '/desktop.bundles/index/_index.css' },
         { elem: 'meta', attrs: { name: 'description', content: 'Project to motivate yourself' }},
         { elem: 'meta', attrs: { name: 'keywords', content: 'bem, express, pysch' }}
     ],
@@ -85,7 +85,6 @@
                 }
             ]
         },
-        { block: 'i-jquery', elem: 'core' },
-        { elem: 'js', url: 'pages-desktop/index/_index.js' }
+        { elem: 'js', url: '/desktop.bundles/index/_index.js' }
     ]
 });

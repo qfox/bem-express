@@ -1,47 +1,44 @@
+
+/* jshint node:true */
+/* global MAKE */
+
+require('bem-environ/lib/nodes');
+
 MAKE.decl('Arch', {
 
-    getLibraries: function() {
+    blocksLevelsRegexp: /^.+?\.blocks/,
+    bundlesLevelsRegexp: /^.+?\.bundles$/,
 
-        if (process.env.ISPROJECT) {
-            process.env.ISPROJECT = false;
-
-            return this.libraries;
-
-        } else {
-            
-            return {
-                'bem-bl': {
-                    type: 'git',
-                    url: 'git://github.com/bem/bem-bl.git',
-                    treeish: '0.3'
-                }
-                // ,
-                // 'bl-core-bemhtml' : {
-                //     type: 'git',
-                //     url: 'git://github.com/bem/bl-core-bemhtml.git'
-                // }
-            };
-        }
-
-    }
+    libraries: [
+        'bem-core @ 69698da02475fbd5be3c57511f40a2310c74a99f',
+        'bem-components @ 231b03867325a51a33ae6bdd300b12946944a4de'
+    ]
 
 });
 
 MAKE.decl('BundleNode', {
 
-    getTechs: function() {
+    getTechs: function () {
 
         return [
             'bemjson.js',
             'bemdecl.js',
             'deps.js',
-            'bemhtml.js',
+            'bemhtml',
+            'browser.js+bemhtml',
             'css',
+            'ie.css',
             'js',
+            'html',
             'priv.js'
-            // ,
-            // 'html'
         ];
+    },
+
+    // what is that?
+    'create-browser.js+bemhtml-optimizer-node': function (tech, sourceNode, bundleNode) {
+        sourceNode.getFiles().forEach(function (f) {
+            this['create-js-optimizer-node'](tech, this.ctx.arch.getNode(f), bundleNode);
+        }, this);
     }
 
 });

@@ -1,10 +1,10 @@
-blocks['b-page'] = function(data) {
+blocks['page'] = function(data) {
     return {
-        block: 'b-page',
+        block: 'page',
         content: [
             {
                 elem: 'q',
-                content: 'qq'
+                content: ['qq', Math.floor(Math.random()*1000)]
             },
             {
                 elem: 'qq',

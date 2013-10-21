@@ -5,14 +5,12 @@ var BEM = require('bem'),
 
 var bemDriver = function() {
 
-    var getBemhtml = function(str) {
-
-        var path = str;
+    var getBemhtml = function (path) {
 
         return BEM.util.readFile(path)
             .then(function(c) {
                 /** @name BEMHTML variable appears after runInThisContext() call */
-                VM.runInThisContext(c, path);
+                VM.runInThisContext(c + ';this.BEMHTML;', path);
                 return BEMHTML;
             });
 
@@ -29,13 +27,14 @@ var bemDriver = function() {
         return BEM.util.readFile(path)
             .then(function(c) {
                 var blocks = {},
+                    ROOT = 'page',
                     res;
 
                 try {
                     eval(c);
-                    res = blocks['b-page'] ? blocks['b-page'](options) : { block: 'b-page', content: ["blocks['b-page'] not found in ", path] };
+                    res = blocks[ROOT]? blocks[ROOT](options) : { block: ROOT, content: ["blocks[", ROOT, "] not found in ", path] };
                 } catch (err) {
-                    res = { block: 'b-page', content: ['Exception in ', path, err.toString()] };
+                    res = { block: ROOT, content: ['Exception in ', path, err.toString()] };
                 }
 
                 return res;

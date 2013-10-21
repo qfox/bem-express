@@ -2,10 +2,18 @@
   "name": "BEM-express",
   "description": "A driver between BEM and expressjs",
   "author": "Rodion Volchkov <rodique@ya.ru>",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "repository": {
+    "type" : "git"
+  , "url" : "https://github.com/rodique/bem-express.git"
+  },
   "dependencies": {
     "express": ">= 3.0.3",
-    "bem": ">= 0.5.20"
+    "bem": "bem/bem-tools#v0.6.16",
+    "bem-environ" : "~1.0.1"
   },
-  "engine": "node 0.6.11"
+  "engines": {
+    "node": "0.8 || 0.10"
+  },
+  "private": true
 }
